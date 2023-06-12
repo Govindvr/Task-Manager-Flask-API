@@ -23,6 +23,7 @@ class Task(db.Model):
             'title': self.title,
             'description': self.description,
             'due_date': self.due_date,
+            'status': self.status,
         }
 
     def __repr__(self):
