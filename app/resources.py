@@ -2,6 +2,7 @@ from flask_restful import Resource, reqparse
 from .models import db, Task
 from flask import jsonify
 from datetime import datetime
+from sqlalchemy import desc
 
 parser = reqparse.RequestParser()
 parser.add_argument('title', type=str, required=True, help='Title is required')
@@ -16,7 +17,7 @@ status_parser.add_argument('status', type=str, required=True,
 
 class TasksResource(Resource):
     def get(self):
-        tasks = Task.query.all().order_by(Task.created_at.desc())
+        tasks = Task.query.order_by(Task.created_at).all()
         return jsonify([task.to_dict() for task in tasks])
     
     def post(self):
