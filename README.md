@@ -31,12 +31,12 @@ python run.py
 The app will be availiable on http://localhost:5000/
 
 ## API Endpoints
-1. GET /tasks - Returns a list of all tasks.
-2. GET /tasks/<id> - Returns the task with the specified ID.
-3. POST /tasks - Creates a new task with the specified data.
-4. PUT /tasks/<id> - Updates the task with the specified ID with the new data.
-5. DELETE /tasks/<id> - Deletes the user with the specified ID.
-6. PUT /tasks/<id>/status - Updates the status of the task with the specified ID.
+1. GET /api/tasks - Returns a list of all tasks.
+2. GET /api/tasks/<id> - Returns the task with the specified ID.
+3. POST /api/tasks - Creates a new task with the specified data.
+4. PUT /api/tasks/<id> - Updates the task with the specified ID with the new data.
+5. DELETE /api/tasks/<id> - Deletes the user with the specified ID.
+6. PUT /api/tasks/<id>/status - Updates the status of the task with the specified ID.
 
 ## API Request Format
 1. POST /tasks
